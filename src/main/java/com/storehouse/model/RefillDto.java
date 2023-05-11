@@ -2,21 +2,21 @@ package com.storehouse.model;
 
 import java.util.Objects;
 
-public class ContainerToRefill {
+public class RefillDto {
 	
 	public int number;
 	public String product;
 	public String measureUnit;
 	public int amountToAdd;
 	
-	public ContainerToRefill(int number, String product, String measureUnit, int amountToAdd) {
+	public RefillDto(int number, String product, String measureUnit, int amountToAdd) {
 		this.number = number;
 		this.product = product;
 		this.measureUnit = measureUnit;
 		this.amountToAdd = amountToAdd;
 	}
 	
-	public ContainerToRefill() {}
+	public RefillDto() {}
 
 	@Override
 	public String toString() {
@@ -37,7 +37,7 @@ public class ContainerToRefill {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ContainerToRefill other = (ContainerToRefill) obj;
+		RefillDto other = (RefillDto) obj;
 		return amountToAdd == other.amountToAdd && Objects.equals(measureUnit, other.measureUnit)
 				&& number == other.number && Objects.equals(product, other.product);
 	};

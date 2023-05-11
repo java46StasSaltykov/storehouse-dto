@@ -1,18 +1,21 @@
 package com.storehouse.model;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class FullnessMeasurement {
+public class ContainerMeasurementDto {
 	
-	public Container container;
+	public ContainerDto container;
 	public int currentStatus;
+	LocalDateTime timeStamp;
 	
-	public FullnessMeasurement(Container container, int currentStatus) {
+	public ContainerMeasurementDto(ContainerDto container, int currentStatus) {
 		this.container = container;
 		this.currentStatus = currentStatus;
+		this.timeStamp = LocalDateTime.now();
 	}
 	
-	public FullnessMeasurement() {}
+	public ContainerMeasurementDto() {}
 
 	@Override
 	public String toString() {
@@ -32,7 +35,7 @@ public class FullnessMeasurement {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FullnessMeasurement other = (FullnessMeasurement) obj;
+		ContainerMeasurementDto other = (ContainerMeasurementDto) obj;
 		return Objects.equals(container, other.container) && currentStatus == other.currentStatus;
 	};
 

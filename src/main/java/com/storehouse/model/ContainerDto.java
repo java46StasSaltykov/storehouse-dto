@@ -2,21 +2,21 @@ package com.storehouse.model;
 
 import java.util.Objects;
 
-public class Container {
+public class ContainerDto {
 	
 	public int number;
 	public String product;
 	public String measureUnit;
 	public int capacity;
 	
-	public Container(int number, String product, String measureUnit, int capacity) {
+	public ContainerDto(int number, String product, String measureUnit, int capacity) {
 		this.number = number;
 		this.product = product;
 		this.measureUnit = measureUnit;
 		this.capacity = capacity;
 	}
 	
-	public Container() {}
+	public ContainerDto() {}
 
 	@Override
 	public String toString() {
@@ -37,7 +37,7 @@ public class Container {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Container other = (Container) obj;
+		ContainerDto other = (ContainerDto) obj;
 		return capacity == other.capacity && Objects.equals(measureUnit, other.measureUnit) && number == other.number
 				&& Objects.equals(product, other.product);
 	};
