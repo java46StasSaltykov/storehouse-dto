@@ -20,7 +20,7 @@ public class RefillDto {
 
 	@Override
 	public String toString() {
-		return "LackOfContainer [containerNumber=" + containerNumber + ", product=" + product + ", measureUnit=" + measureUnit
+		return "RefillDto [containerNumber=" + containerNumber + ", product=" + product + ", measureUnit=" + measureUnit
 				+ ", amountToAdd=" + amountToAdd + "]";
 	}
 
