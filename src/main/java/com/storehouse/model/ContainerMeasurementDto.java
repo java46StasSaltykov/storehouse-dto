@@ -7,7 +7,7 @@ public class ContainerMeasurementDto {
 	
 	public ContainerDto container;
 	public int currentStatus;
-	LocalDateTime timeStamp;
+	public LocalDateTime timeStamp;
 	
 	public ContainerMeasurementDto(ContainerDto container, int currentStatus) {
 		this.container = container;
